@@ -63,13 +63,7 @@ The best part? This project cost me **very little** to build:
 
 Check out VaporChat in action! This demo showcases the complete user flow from signup to real-time messaging and the vaporize feature.
 
-<div align="center">
-  
-[![VaporChat Demo](https://img.youtube.com/vi/fZXe3CvVsiI/maxresdefault.jpg)](https://youtu.be/fZXe3CvVsiI)
-
 **[▶️ Watch Full Demo on YouTube](https://youtu.be/fZXe3CvVsiI)**
-
-</div>
 
 ### 📚 Documentation
 
