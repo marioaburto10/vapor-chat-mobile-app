@@ -59,6 +59,17 @@ The best part? This project cost me **very little** to build:
 
 **It really is amazing and mind-blowing how far AI has come!** 🤖
 
+### 🎥 Video Demo
+
+Check out VaporChat in action! This demo showcases the complete user flow from signup to real-time messaging and the vaporize feature.
+
+<div align="center">
+  <video src="public/VaporChatUpdated.mp4" width="400" controls>
+    Your browser does not support the video tag.
+  </video>
+  
+  *Watch the full demo: [VaporChatUpdated.mp4](public/VaporChatUpdated.mp4)*
+</div>
 
 ### 📚 Documentation
 
