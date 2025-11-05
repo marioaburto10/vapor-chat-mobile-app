@@ -1,17 +1,98 @@
-# VaporChat
+<div align="center">
+  <img src="public/VaporChatLogo.png" alt="VaporChat Logo" width="200"/>
+  
+  # VaporChat
+  
+  ### Ephemeral messaging for the modern age 💨
+  
+  A sleek mobile chat application with ephemeral messaging. Create private rooms, chat in real-time, and vaporize conversations when you're done.
+  
+  [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+  [![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat&logo=react&logoColor=61DAFB)](https://reactnative.dev/)
+  [![Expo](https://img.shields.io/badge/Expo-000020?style=flat&logo=expo&logoColor=white)](https://expo.dev/)
+  [![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)](https://nodejs.org/)
+  [![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+  [![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=flat&logo=socket.io&logoColor=white)](https://socket.io/)
+  
+</div>
 
-A modern mobile chat application with ephemeral messaging. Create private rooms, chat in real-time, and vaporize conversations when you're done.
+---
 
-## Features
+## 👋 Introduction
 
-- 🔐 **User Authentication**: Secure signup and login
-- 💬 **Real-time Chat**: Instant messaging with Socket.io
-- 🚪 **Room Management**: Create and join password-protected rooms
-- 💨 **Vaporize History**: Delete all messages in a room permanently
-- 🎨 **Vapor Theme**: Beautiful black, white, and gray gradient design
-- 📱 **Cross-platform**: iOS and Android support via React Native + Expo
+I created this project using AI tools as part of our first sprint over at Overclock AI Engineering Accelerator. It took me about 4-5 hours to put this project together and I did not write a single line of code. I started out by
 
-## Project Structure
+https://www.cosmos.so/home
+https://overclockaccelerator.com/
+
+
+### Why VaporChat?
+
+- **Privacy First**: All rooms are password-protected with encrypted credentials
+- **Ephemeral by Design**: Vaporize feature lets you permanently delete all messages
+- **Real-time**: Powered by Socket.io for instant message delivery
+- **Beautiful UI**: Dark vaporwave-inspired design with smooth gradients
+- **Cross-platform**: Works seamlessly on iOS and Android
+
+Perfect for temporary project discussions, private group chats, or any conversation that doesn't need to be permanent.
+
+### 📚 Documentation
+
+For detailed information, check out our comprehensive documentation:
+
+- **[Architecture Guide](docs/ARCHITECTURE.md)** - System design, data flow, and technical architecture
+- **[Features](docs/FEATURES.md)** - Detailed feature breakdown and usage guide
+- **[Quick Start](docs/QUICK_START.md)** - Get up and running in 5 minutes
+- **[Setup Guide](docs/SETUP.md)** - Complete installation and configuration
+- **[Project Summary](docs/PROJECT_SUMMARY.md)** - High-level project overview
+- **[Documentation Index](docs/DOCUMENTATION_INDEX.md)** - Complete documentation index
+
+---
+
+## 📋 Table of Contents
+
+- [✨ Features](#-features)
+- [📁 Project Structure](#-project-structure)
+- [🚀 Getting Started](#-getting-started)
+- [🛠️ Tech Stack](#%EF%B8%8F-tech-stack)
+- [📡 API Documentation](#-api-documentation)
+- [🎨 Design Philosophy](#-design-philosophy)
+- [🔒 Security Features](#-security-features)
+- [💻 Development](#-development)
+- [🚢 Production Deployment](#-production-deployment)
+
+---
+
+## ✨ Features
+
+<table>
+  <tr>
+    <td>🔐</td>
+    <td><strong>User Authentication</strong><br/>Secure signup and login with JWT tokens</td>
+  </tr>
+  <tr>
+    <td>💬</td>
+    <td><strong>Real-time Chat</strong><br/>Instant messaging powered by Socket.io</td>
+  </tr>
+  <tr>
+    <td>🚪</td>
+    <td><strong>Room Management</strong><br/>Create and join password-protected chat rooms</td>
+  </tr>
+  <tr>
+    <td>💨</td>
+    <td><strong>Vaporize History</strong><br/>Delete all messages in a room permanently</td>
+  </tr>
+  <tr>
+    <td>🎨</td>
+    <td><strong>Vapor Theme</strong><br/>Beautiful dark UI with gradient effects</td>
+  </tr>
+  <tr>
+    <td>📱</td>
+    <td><strong>Cross-platform</strong><br/>iOS and Android support via React Native + Expo</td>
+  </tr>
+</table>
+
+## 📁 Project Structure
 
 ```
 vapor-chat-mobile-app/
@@ -26,19 +107,28 @@ vapor-chat-mobile-app/
 │   │   └── server.ts
 │   └── package.json
 │
-└── mobile/            # React Native + Expo frontend
-    ├── app/
-    │   ├── components/
-    │   ├── screens/
-    │   ├── navigation/
-    │   ├── context/
-    │   ├── services/
-    │   └── types/
-    ├── App.tsx
-    └── package.json
+├── mobile/            # React Native + Expo frontend
+│   ├── app/
+│   │   ├── components/
+│   │   ├── screens/
+│   │   ├── navigation/
+│   │   ├── context/
+│   │   ├── services/
+│   │   └── types/
+│   ├── App.tsx
+│   └── package.json
+│
+├── docs/              # Project documentation
+│   ├── ARCHITECTURE.md
+│   ├── FEATURES.md
+│   ├── QUICK_START.md
+│   ├── SETUP.md
+│   └── PROJECT_SUMMARY.md
+│
+└── README.md          # This file
 ```
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 - Node.js (v18 or higher)
@@ -97,15 +187,16 @@ export const API_BASE_URL = 'http://192.168.1.XXX:5000';
 
 4. Start the Expo development server:
 ```bash
-npm start
+npx expo start
 ```
 
 5. Run on your preferred platform:
-- Press `i` for iOS Simulator
-- Press `a` for Android Emulator
-- Scan QR code with Expo Go app for physical device
+- Press `i` for **iOS Simulator**
+- Press `a` for **Android Emulator**  
+- Press `w` for **Web browser**
+- Scan QR code with **Expo Go** app for physical device
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 ### Backend
 - **Express.js**: Web framework
@@ -124,7 +215,7 @@ npm start
 - **AsyncStorage**: Persistent storage
 - **Expo Linear Gradient**: Gradient effects
 
-## API Endpoints
+## 📡 API Documentation
 
 ### Authentication
 - `POST /api/auth/signup` - Create new account
@@ -145,7 +236,7 @@ npm start
 - `vaporize_room` - Vaporize room history
 - `room_vaporized` - Room history deleted notification
 
-## Design Philosophy
+## 🎨 Design Philosophy
 
 VaporChat embraces a **vapor aesthetic** with:
 - Pure black backgrounds (#000000)
@@ -156,7 +247,7 @@ VaporChat embraces a **vapor aesthetic** with:
 
 The design is inspired by vapor/smoke-like flowing shapes, creating a modern and ephemeral atmosphere that matches the app's core functionality.
 
-## Security Features
+## 🔒 Security Features
 
 - Password hashing with bcrypt
 - JWT token authentication
@@ -165,7 +256,7 @@ The design is inspired by vapor/smoke-like flowing shapes, creating a modern and
 - Secure room passwords
 - HTTPS ready for production
 
-## Development
+## 💻 Development
 
 ### Backend Development
 ```bash
@@ -178,12 +269,14 @@ npm start        # Run production build
 ### Mobile Development
 ```bash
 cd mobile
-npm start        # Start Expo dev server
-npm run ios      # Run on iOS
-npm run android  # Run on Android
+npx expo start              # Start Expo dev server
+npx expo start --clear      # Start with cache cleared
+npx expo start --ios        # Start and open iOS simulator
+npx expo start --android    # Start and open Android emulator
+npx expo-doctor             # Check for project issues
 ```
 
-## Production Deployment
+## 🚢 Production Deployment
 
 ### Backend
 1. Deploy to a hosting service (Heroku, Railway, DigitalOcean)
@@ -192,22 +285,22 @@ npm run android  # Run on Android
 4. Enable HTTPS
 
 ### Mobile App
-1. Build iOS app: `expo build:ios`
-2. Build Android app: `expo build:android`
-3. Submit to App Store / Google Play
-
-## Contributing
-
-This is a personal project, but suggestions and feedback are welcome!
-
-## License
-
-MIT
-
-## Support
-
-For issues or questions, please open an issue on GitHub.
+1. Build for development: `eas build --profile development --platform ios`
+2. Build for production: `eas build --profile production --platform all`
+3. Submit to stores: `eas submit --platform all`
 
 ---
 
-**VaporChat** - Ephemeral messaging for the modern age 💨
+<div align="center">
+  
+  ### VaporChat
+  
+  **Ephemeral messaging for the modern age**
+  
+  Made with ❤️ using React Native, Express.js, and MongoDB
+  
+  [Report Bug](https://github.com/marioaburto10/vapor-chat-mobile-app/issues) · [Request Feature](https://github.com/marioaburto10/vapor-chat-mobile-app/issues)
+  
+  © 2025 VaporChat. All rights reserved.
+  
+</div>
