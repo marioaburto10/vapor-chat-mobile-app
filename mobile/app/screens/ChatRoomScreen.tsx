@@ -167,7 +167,8 @@ const ChatRoomScreen: React.FC<Props> = ({ navigation, route }) => {
       />
       
       <View style={styles.roomHeader}>
-        <Text style={styles.roomName}>You Are Now in Room: {roomName}</Text>
+        <Text style={styles.roomHeaderText}>You Are Now in Room:</Text>
+        <Text style={styles.roomName}>{roomName}</Text>
       </View>
 
       <FlatList
@@ -227,10 +228,16 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#333333',
   },
+  roomHeaderText: {
+    color: '#999999',
+    fontSize: 14,
+    textAlign: 'center',
+    marginBottom: 4,
+  },
   roomName: {
     color: '#ffffff',
-    fontSize: 18,
-    fontWeight: '600',
+    fontSize: 20,
+    fontWeight: '700',
     textAlign: 'center',
   },
   messagesList: {

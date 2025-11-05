@@ -8,6 +8,7 @@ import {
   ScrollView,
   Alert,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types';
@@ -116,6 +117,14 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
           contentContainerStyle={styles.scrollContent}
           keyboardShouldPersistTaps="handled"
         >
+          <View style={styles.logoContainer}>
+            <Image
+              source={require('../../assets/VaporChatLogo.png')}
+              style={styles.logo}
+              resizeMode="contain"
+            />
+          </View>
+
           <Text style={styles.title}>
             {activeTab === 'create' ? 'Create a Room' : 'Join a Room'}
           </Text>
@@ -168,6 +177,14 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     paddingHorizontal: 24,
     paddingVertical: 40,
+  },
+  logoContainer: {
+    alignItems: 'center',
+    marginBottom: 24,
+  },
+  logo: {
+    width: 120,
+    height: 120,
   },
   title: {
     fontSize: 28,
