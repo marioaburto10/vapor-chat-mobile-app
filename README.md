@@ -64,11 +64,11 @@ The best part? This project cost me **very little** to build:
 Check out VaporChat in action! This demo showcases the complete user flow from signup to real-time messaging and the vaporize feature.
 
 <div align="center">
-  <video src="public/VaporChatUpdated.mp4" width="400" controls>
-    Your browser does not support the video tag.
-  </video>
   
-  *Watch the full demo: [VaporChatUpdated.mp4](public/VaporChatUpdated.mp4)*
+[![VaporChat Demo](https://img.youtube.com/vi/fZXe3CvVsiI/maxresdefault.jpg)](https://youtu.be/fZXe3CvVsiI)
+
+**[▶️ Watch Full Demo on YouTube](https://youtu.be/fZXe3CvVsiI)**
+
 </div>
 
 ### 📚 Documentation
