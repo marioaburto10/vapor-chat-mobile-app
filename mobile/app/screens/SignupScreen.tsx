@@ -67,7 +67,7 @@ const SignupScreen: React.FC<Props> = ({ navigation }) => {
       >
         <View style={styles.logoContainer}>
           <Image
-            source={require('../../../public/VaporChatLogo.png')}
+            source={require('../../assets/VaporChatLogo.png')}
             style={styles.logo}
             resizeMode="contain"
           />

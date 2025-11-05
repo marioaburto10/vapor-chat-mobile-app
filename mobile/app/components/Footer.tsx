@@ -4,14 +4,16 @@ import { View, Text, StyleSheet } from 'react-native';
 const Footer: React.FC = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Copyright VaporChat 2025</Text>
+      <Text style={styles.text}>© VaporChat 2025</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
+    paddingTop: 20,
+    paddingHorizontal: 20,
+    paddingBottom: 40,
     backgroundColor: '#000000',
     borderTopWidth: 1,
     borderTopColor: '#1a1a1a',

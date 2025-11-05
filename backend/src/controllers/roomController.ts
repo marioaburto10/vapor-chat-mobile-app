@@ -152,8 +152,17 @@ export const getRoomMessages = async (
       .limit(limit)
       .select('userId displayName content timestamp');
 
+    // Convert MongoDB IDs to strings
+    const formattedMessages = messages.reverse().map((msg) => ({
+      id: String(msg._id),
+      userId: String(msg.userId),
+      displayName: msg.displayName,
+      content: msg.content,
+      timestamp: msg.timestamp,
+    }));
+
     res.status(200).json({
-      messages: messages.reverse(), // Return in chronological order
+      messages: formattedMessages,
     });
   } catch (error: any) {
     res.status(500).json({ error: error.message });

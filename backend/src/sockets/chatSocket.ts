@@ -85,8 +85,8 @@ export const setupChatSocket = (io: Server): void => {
 
         // Broadcast message to all users in the room (including sender)
         io.to(roomId).emit('receive_message', {
-          id: message._id,
-          userId: message.userId,
+          id: String(message._id),
+          userId: String(message.userId),
           displayName: message.displayName,
           content: message.content,
           timestamp: message.timestamp,

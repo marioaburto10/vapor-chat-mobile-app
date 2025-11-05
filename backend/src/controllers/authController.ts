@@ -53,7 +53,7 @@ export const signup = async (req: Request, res: Response): Promise<void> => {
       message: 'User created successfully',
       token,
       user: {
-        id: user._id,
+        id: String(user._id),
         email: user.email,
       },
     });
@@ -94,7 +94,7 @@ export const login = async (req: Request, res: Response): Promise<void> => {
       message: 'Login successful',
       token,
       user: {
-        id: user._id,
+        id: String(user._id),
         email: user.email,
       },
     });

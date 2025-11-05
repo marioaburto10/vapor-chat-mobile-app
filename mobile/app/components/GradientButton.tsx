@@ -37,7 +37,7 @@ const GradientButton: React.FC<GradientButtonProps> = ({
         {loading ? (
           <ActivityIndicator color="#ffffff" />
         ) : (
-          <Text style={styles.text}>{title}</Text>
+          <Text style={styles.text} numberOfLines={1}>{title}</Text>
         )}
       </LinearGradient>
     </TouchableOpacity>
@@ -53,6 +53,8 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 8,
+    borderWidth: 1,
+    borderColor: '#666666',
   },
   gradient: {
     paddingVertical: 16,
@@ -66,6 +68,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
     letterSpacing: 0.5,
+    textAlign: 'center',
   },
   disabled: {
     opacity: 0.5,

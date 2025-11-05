@@ -129,6 +129,9 @@ const ChatRoomScreen: React.FC<Props> = ({ navigation, route }) => {
 
   const renderMessage = ({ item }: { item: Message }) => {
     const isOwnMessage = item.userId === user?.id;
+    
+    // Debug logging
+    console.log('Message userId:', item.userId, 'Current user id:', user?.id, 'isOwnMessage:', isOwnMessage);
 
     return (
       <View
@@ -137,7 +140,12 @@ const ChatRoomScreen: React.FC<Props> = ({ navigation, route }) => {
           isOwnMessage ? styles.ownMessage : styles.otherMessage,
         ]}
       >
-        {!isOwnMessage && <Text style={styles.displayName}>{item.displayName}</Text>}
+        <Text style={[
+          styles.displayName,
+          isOwnMessage ? styles.ownDisplayName : styles.otherDisplayName
+        ]}>
+          {item.displayName}
+        </Text>
         <View
           style={[
             styles.messageBubble,
@@ -169,7 +177,7 @@ const ChatRoomScreen: React.FC<Props> = ({ navigation, route }) => {
         ref={flatListRef}
         data={messages}
         renderItem={renderMessage}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item, index) => item.id || `message-${item.userId}-${item.timestamp}-${index}`}
         contentContainerStyle={styles.messagesList}
         onContentSizeChange={scrollToBottom}
       />
@@ -200,7 +208,7 @@ const ChatRoomScreen: React.FC<Props> = ({ navigation, route }) => {
           </View>
           <View style={styles.buttonWrapper}>
             <GradientButton
-              title="Vaporize History"
+              title="Vaporize"
               onPress={handleVaporize}
               variant="primary"
             />
@@ -248,7 +256,13 @@ const styles = StyleSheet.create({
     color: '#999999',
     fontSize: 12,
     marginBottom: 4,
-    marginLeft: 12,
+    marginHorizontal: 12,
+  },
+  ownDisplayName: {
+    textAlign: 'right',
+  },
+  otherDisplayName: {
+    textAlign: 'left',
   },
   messageBubble: {
     padding: 12,
@@ -298,7 +312,9 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   actionsContainer: {
-    padding: 16,
+    paddingTop: 16,
+    paddingHorizontal: 16,
+    paddingBottom: 32,
     backgroundColor: '#000000',
     borderTopWidth: 1,
     borderTopColor: '#1a1a1a',
