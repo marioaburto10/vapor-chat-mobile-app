@@ -5,7 +5,7 @@
   
   ### Ephemeral messaging for the modern age 💨
   
-  A sleek mobile chat application with ephemeral messaging. Create private rooms, chat in real-time, and vaporize conversations when you're done.
+  A sleek mobile chat application with ephemeral messaging, built using AI. Create private rooms, chat in real-time, and vaporize conversations when you're done.
   
   [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
   [![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat&logo=react&logoColor=61DAFB)](https://reactnative.dev/)
@@ -20,21 +20,45 @@
 
 ## 👋 Introduction
 
-I created this project using AI tools as part of our first sprint over at Overclock AI Engineering Accelerator. It took me about 4-5 hours to put this project together and I did not write a single line of code. I started out by
+I created this project using AI tools as part of our first sprint at [Overclock AI Engineering Accelerator](https://overclockaccelerator.com/). It took me about 4-5 hours to put this project together, and **I did not write a single line of code**. Even this README was created using AI.
 
-https://www.cosmos.so/home
-https://overclockaccelerator.com/
+### 🎨 Design Process
 
+I started by searching for inspiration photos on [Cosmos](https://www.cosmos.so/home). After finding a few designs I liked (saved in the `inspo_images/` directory), I uploaded them to [ChatGPT](https://chatgpt.com/) and asked it to create a logo using those images as reference. After 4-5 iterations, I got the perfect logo you see today.
 
-### Why VaporChat?
+### 💻 Development Process
 
-- **Privacy First**: All rooms are password-protected with encrypted credentials
-- **Ephemeral by Design**: Vaporize feature lets you permanently delete all messages
-- **Real-time**: Powered by Socket.io for instant message delivery
-- **Beautiful UI**: Dark vaporwave-inspired design with smooth gradients
-- **Cross-platform**: Works seamlessly on iOS and Android
+I spent about 30-40 minutes putting the [initial prompt](docs/prompt.md) together., I fed everything to [Cursor](https://cursor.com/) along with the logo and the [mockup](docs/mockup.png) provided by my instructor. With no mockup, I probably would have spent an extra 15-20 minutes putting a simple desgin together. I was very specific about:
+- Technologies to use (React Native, Express.js, MongoDB, Socket.io)
+- Visual style (vaporwave aesthetic, dark theme)
+- Core functionality (auth, real-time chat, vaporize feature)
 
-Perfect for temporary project discussions, private group chats, or any conversation that doesn't need to be permanent.
+Cursor generated all the code quickly and even created documentation automatically without being asked!
+
+### 🚀 Deployment Journey
+
+I started off attempting to use Vercel but quickly found out that [Vercel](https://vercel.com/) does not have WebSocket support so Cursor suggested switching over to Railway.
+
+- **Backend**: Spent ~1 hour troubleshooting environment variables on [Railway](https://railway.com/) (first time using it), but successfully got it running
+- **Database**: Set up a free [MongoDB Atlas](https://www.mongodb.com/products/platform/cloud) cluster
+- **Mobile**: Spent ~30 minutes resolving React Native and Expo package version mismatches
+- **Build**: Successfully deployed as iOS and Android apps locally using [Expo EAS](https://expo.dev/eas)
+
+### 💰 Total Cost
+
+The best part? This project cost me **very little** to build:
+
+| Tool | Cost | Notes |
+|------|------|-------|
+| [Cursor](https://cursor.com/) | **$20/month** | AI-powered IDE with Claude Sonnet |
+| [ChatGPT Plus](https://chatgpt.com/) | **$20/month** | Used for logo generation |
+| [Railway](https://railway.com/) | **$0** | Free tier for backend hosting |
+| [MongoDB Atlas](https://www.mongodb.com/products/platform/cloud) | **$0** | Free M0 cluster (512MB storage) |
+| [Expo](https://expo.dev/) | **$0** | Free tier for development builds |
+| **Total Monthly Cost** | **$40** | Just AI tool subscriptions! |
+
+**It really is amazing and mind-blowing how far AI has come!** 🤖
+
 
 ### 📚 Documentation
 
