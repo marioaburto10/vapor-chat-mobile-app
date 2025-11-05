@@ -129,9 +129,6 @@ const ChatRoomScreen: React.FC<Props> = ({ navigation, route }) => {
 
   const renderMessage = ({ item }: { item: Message }) => {
     const isOwnMessage = item.userId === user?.id;
-    
-    // Debug logging
-    console.log('Message userId:', item.userId, 'Current user id:', user?.id, 'isOwnMessage:', isOwnMessage);
 
     return (
       <View

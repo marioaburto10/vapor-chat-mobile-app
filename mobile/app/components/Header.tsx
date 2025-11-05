@@ -129,8 +129,8 @@ const styles = StyleSheet.create({
     gap: 12,
   },
   logo: {
-    width: 40,
-    height: 40,
+    width: 50,
+    height: 50,
   },
   logoText: {
     color: '#ffffff',
